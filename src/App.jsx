@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "./reducers/actions.js";
 
 const App = () => {
-  const counterValue = useSelector((state) => state.counter);
+  const counter = useSelector((state) => state.counter);
 
   const dispatch = useDispatch();
 
@@ -12,7 +12,7 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <Counter
-          value={counterValue}
+          value={counter}
           onIncrement={() => dispatch(increment())}
           onDecrement={() => dispatch(decrement())}
         />
